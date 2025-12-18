@@ -1,0 +1,245 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #ce8026;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 100px;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Switch de tema */
+.switch-container {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background: #ccc;
+  border-radius: 30px;
+  position: absolute;
+  inset: 0;
+}
+
+.icone {
+  background: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.switch input:checked~.slider {
+  background: #333;
+}
+
+.switch input:checked~.slider .icone {
+  transform: translateX(30px);
+}
+
+/* ===== CARD DE LOGIN ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.card input {
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+}
+
+.card input:focus {
+  border-color: #ce8026;
+}
+
+/* === BOTÃO PADRÃO === */
+.card button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 12px;
+  background: #ce8026; /* cor principal BusTime */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #a6621c;
+}
+
+/* Campo da senha */
+.senha-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.senha-container input {
+  width: 100%;
+  height: 42px;
+  padding-right: 40px;
+}
+
+.senha-container img {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Link */
+.link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Link padrão (modo claro) */
+.link a {
+  color: rgb(0, 55, 255); /* azul padrão */
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.link a:hover {
+  color: rgb(41, 0, 204); /* azul mais escuro ao passar o mouse */
+}
+
+/* Link no modo escuro */
+body.escuro .link a {
+  color: #ce8026; /* laranja BusTime */
+}
+
+body.escuro .link a:hover {
+  color: #fff; /* branco ao passar o mouse no escuro */
+}
+
+
+/* ======== MODO ESCURO ======== */
+body.escuro {
+  background-color: #181818;
+  color: #fff;
+}
+
+/* Navbar mantém a mesma cor */
+body.escuro .navbar {
+  background: #ce8026;
+}
+
+/* Card e textos */
+body.escuro .card {
+  background-color: #2b2b2b;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+body.escuro .card h2,
+body.escuro .card label {
+  color: #fff;
+}
+
+/* Inputs */
+body.escuro .card input {
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+body.escuro .card input::placeholder {
+  color: #ccc;
+}
+
+body.escuro .card input:focus {
+  border-color: #ce8026;
+}
+
+/* Botão (mesma cor do claro) */
+body.escuro .card button {
+  background-color: #ce8026;
+  color: #fff;
+}
+
+body.escuro .card button:hover {
+  background-color: #a6621c;
+}

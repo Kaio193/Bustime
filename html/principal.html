@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BusTime</title>
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="../css/principal.css">
+  <script src="../JavaScript/principal.js" defer></script>
+</head>
+
+<body>
+
+  <!-- 🔹 Barra de navegação -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../img/Logo Bus Time.png" alt="BusTime Logo">
+    </div>
+
+    <nav class="menu">
+      <a href="../html/criar-conta.html" class="botao-menu">Criar Conta</a>
+      <a href="../html/login.html" class="botao-menu">Login</a>
+    </nav>
+
+    <!-- Botão de alternância de tema -->
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-tema">
+        <span class="slider">
+          <span class="icone" id="icone-tema">☀</span>
+        </span>
+      </label>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <h2>Bem-vindo ao BusTime</h2>
+    <p>Veja avaliações de ônibus, motoristas e rotas!</p>
+
+    <div class="container-cartoes">
+      <!-- Cartão 1 -->
+      <section class="cartao-avaliacao">
+        <div class="rotas-info">
+          <img src="../img/rota1.jpg" alt="Mapa da rota" class="mapa">
+          <div class="dados-rota">
+            <strong>Número: 369</strong>
+            <p>Horários:<br>Padre Jovino – 12:00<br>José Medeiros – 12:20</p>
+            <div class="avaliacao">Avaliação: <span class="estrelas">⭐⭐⭐☆☆</span></div>
+          </div>
+        </div>
+
+        <img src="../img/onibus1.jpg" alt="Foto do ônibus" class="foto-onibus">
+
+        <div class="comentarios">
+          <p>• Ônibus desconfortável</p>
+          <p>• O banco estava rasgado</p>
+          <p>• Bem espaçoso</p>
+        </div>
+
+        <div class="info-motorista">
+          <img src="../img/motorista2.jpg" alt="Foto do motorista">
+          <span>Maria César</span>
+        </div>
+      </section>
+        
+      <!-- Cartão 3 (novo no meio) -->
+      <section class="cartao-avaliacao">
+        <div class="rotas-info">
+          <img src="../img/rota3.jpg" alt="Mapa da rota" class="mapa">
+          <div class="dados-rota">
+            <strong>Número: 555</strong>
+            <p>Horários:<br>Central Park – 14:30<br>Jardim das Flores – 15:00</p>
+            <div class="avaliacao">Avaliação: <span class="estrelas">⭐⭐⭐⭐☆</span></div>
+          </div>
+        </div>
+
+        <img src="../img/onibus3.jpg" alt="Foto do ônibus" class="foto-onibus">
+
+        <div class="comentarios">
+          <p>• Ônibus pontual</p>
+          <p>• Motorista muito educado</p>
+          <p>• Interior limpo e confortável</p>
+        </div>
+
+        <div class="info-motorista">
+          <img src="../img/motorista3.jpg" alt="Foto do motorista">
+          <span>Paulo Henrique</span>
+        </div>
+      </section>
+
+      <!-- Cartão 2 -->
+      <section class="cartao-avaliacao">
+        <div class="rotas-info">
+          <img src="../img/rota2.jpg" alt="Mapa da rota" class="mapa">
+          <div class="dados-rota">
+            <strong>Número: 793</strong>
+            <p>Horários:<br>Afonso Nôbrega – 03:00<br>Zezé Medeiros – 03:20</p>
+            <div class="avaliacao">Avaliação: <span class="estrelas">⭐⭐⭐⭐⭐</span></div>
+          </div>
+        </div>
+
+        <img src="../img/onibus2.jpg" alt="Foto do ônibus" class="foto-onibus">
+
+        <div class="comentarios">
+          <p>• Ônibus confortável</p>
+          <p>• Limpo</p>
+          <p>• Bem espaçoso</p>
+        </div>
+
+        <div class="info-motorista">
+          <img src="../img/motorista1.jpg" alt="Foto do motorista">
+          <span>Iremar José</span>
+        </div>
+        <section id="calculadora-viagem">
+  <h2>Calculadora de Tempo de Viagem</h2>
+
+  <form id="form-viagem">
+    <label for="distancia">Distância (km):</label>
+    <input type="number" id="distancia" placeholder="Ex: 120" required>
+
+    <label for="velocidade">Velocidade média (km/h):</label>
+    <input type="number" id="velocidade" placeholder="Ex: 60" required>
+
+    <button type="submit">Calcular Tempo</button>
+  </form>
+
+  <p id="resultado-viagem"></p>
+</section>
+
+      </section>
+    </div>
+  </main>
+</html>

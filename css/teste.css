@@ -1,0 +1,238 @@
+/* ✅ Faz diferença para o HTML de login: afeta o <body> */
+/* Corpo da página – Modo Claro */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* ✅ Faz diferença para o HTML de login: modo escuro do body */
+/* Corpo – Modo Escuro */
+body.escuro {
+    background-color: #121212;
+    color: white;
+}
+
+/* Barra de navegação */
+.navbar {
+    background: #ce8026;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 100px;
+    transform: scale(1.3);
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Switch de tema */
+.switch-container {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+/* ✅ Faz diferença para o HTML de login: .card é usado no login */
+/* Cartões (login, criar conta) */
+.card {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 0 10px #b0b0b0;
+    text-align: left;
+}
+
+/* ✅ Faz diferença para o HTML de login: variação do .card no modo escuro */
+body.escuro .card {
+    background-color: #616161;
+}
+
+/* ✅ Faz diferença para o HTML de login: labels do formulário */
+/* Label */
+.card label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* ✅ Faz diferença para o HTML de login: inputs do formulário */
+/* Inputs */
+.card input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #000;
+}
+
+/* ✅ Faz diferença para o HTML de login: inputs no modo escuro */
+body.escuro .card input {
+    background-color: #c4c4c4;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* ✅ Faz diferença para o HTML de login: imagem/logo usada no login */
+/* Logo */
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+}
+
+/* ✅ Faz diferença para o HTML de login: switch de tema está presente no login */
+/* Switch de tema */
+.switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer
+}
+
+/* ✅ Faz diferença para o HTML de login: esconde o checkbox real do switch */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* ✅ Faz diferença para o HTML de login: estilo do switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer
+}
+
+/* ✅ Faz diferença para o HTML de login: barra do switch */
+.slider {
+    background-color: #ccc;
+    border-radius: 30px;
+    position: absolute;
+    inset: 0;
+    transition: background-color 0.4s;
+    cursor: pointer
+}
+
+/* ✅ Faz diferença para o HTML de login: ícone do switch (sol/lua) */
+.icone {
+    background-color: white;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.4s, background-color 0.4s;
+    font-size: 16px;
+    cursor: pointer
+}
+
+/* ✅ Faz diferença para o HTML de login: cor da barra quando marcado */
+.switch input:checked~.slider {
+    background-color: #333;
+}
+
+/* ✅ Faz diferença para o HTML de login: movimento do ícone quando marcado */
+.switch input:checked~.slider .icone {
+    transform: translateX(30px);
+}
+
+/* ✅ Faz diferença para o HTML de login: botão de envio existe no login */
+/* Botão de envio */
+button[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ✅ Faz diferença para o HTML de login: <small class="erro"> usado no login */
+/* Erros */
+.erro {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+/* ✅ Faz diferença para o HTML de login: campo de senha com botão existe */
+/* Campo de senha com botão */
+.senha-container {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.toggle-senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ✅ Faz diferença para o HTML de login: link "Criar uma conta?" está presente */
+/* Link estilo texto */
+.link {
+    margin-top: 15px;
+    text-align: center;
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.link:hover {
+    text-decoration: none;
+}

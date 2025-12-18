@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Codificação e título da aba -->
+    <meta charset="UTF-8">
+    <title>BusTime</title>
+
+    <!-- Ícone da aba (favicon) -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+
+    <!-- Importação do CSS -->
+    <link rel="stylesheet" href="../css/criar-conta.css">
+
+    <!-- Importação do JavaScript com defer para carregar após o HTML -->
+    <script src="../JavaScript/criar-conta.js" defer></script>
+</head>
+
+<body>
+    <!-- 🔹 Barra de navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="../img/Logo Bus Time.png" alt="BusTime Logo">
+        </div>
+
+        <nav class="menu">
+            <a href="../html/criar-conta.html" class="botao-menu">Criar Conta</a>
+            <a href="../html/login.html" class="botao-menu">Login</a>
+        </nav>
+
+        <!-- Botão de alternância de tema -->
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="toggle-tema">
+                <span class="slider">
+                    <span class="icone" id="icone-tema">☀</span>
+                </span>
+            </label>
+        </div>
+    </header>
+
+    <!-- 🔹 Centralização -->
+    <main>
+        <div id="tela-criar" class="card">
+            <h2>Criar Conta</h2>
+            <form onsubmit="criarConta(event)">
+                <!-- E-mail com confirmação -->
+                <label for="novo-email">E-mail:</label>
+                <input type="email" id="novo-email" placeholder="Digite seu e-mail">
+
+                <label for="confirmar-email">Confirmar E-mail:</label>
+                <input type="email" id="confirmar-email" placeholder="Confirme seu e-mail">
+
+                <!-- Senha com confirmação -->
+                <!-- Senha -->
+                <label for="senha">Senha:</label>
+                <div class="senha-container">
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                    <img src="../img/olhofechado.jpg" alt="Mostrar senha" onclick="mostrarSenha('senha', this)">
+                </div>
+
+                <!-- Confirmar senha -->
+                <label for="confirmaSenha">Confirmar senha:</label>
+                <div class="senha-container">
+                    <input type="password" id="confirmaSenha" placeholder="Confirme sua senha">
+                    <img src="../img/olhofechado.jpg" alt="Mostrar senha" onclick="mostrarSenha('confirmaSenha', this)">
+                </div>
+
+                <!-- Botão de cadastro -->
+                <button type="submit">Cadastrar</button>
+            </form>
+            <!-- Voltar ao login -->
+            <div class="link">
+                <a href="../html/login.html">Voltar para login</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

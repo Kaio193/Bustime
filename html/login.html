@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BusTime</title>
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="../JavaScript/login.js" defer></script>
+</head>
+
+<body>
+  <!-- 🔹 Barra de navegação -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../img/Logo Bus Time.png" alt="BusTime Logo">
+    </div>
+
+    <nav class="menu">
+      <a href="../html/criar-conta.html" class="botao-menu">Criar Conta</a>
+      <a href="../html/principal.html" class="botao-menu">Principal</a>
+    </nav>
+
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-tema">
+        <span class="slider">
+          <span class="icone" id="icone-tema">☀</span>
+        </span>
+      </label>
+    </div>
+  </header>
+
+  <!-- 🔹 Corpo principal -->
+  <main>
+    <div id="tela-login" class="card">
+      <h2>Login</h2>
+      <form onsubmit="irParaInicio(event)">
+        <!-- E-mail -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+
+        <!-- Senha -->
+        <label for="senha">Senha:</label>
+        <div class="senha-container">
+          <input type="password" id="senha" placeholder="Digite sua senha">
+          <img src="../img/olhofechado.jpg" alt="Mostrar senha" onclick="mostrarSenha('senha', this)">
+        </div>
+
+        <!-- CEP -->
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" placeholder="Digite seu CEP">
+
+        <!-- Botão de login -->
+        <button type="submit">Entrar</button>
+
+        <!-- Voltar -->
+        <div class="link">
+          <a href="../html/criar-conta.html">Criar uma conta</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

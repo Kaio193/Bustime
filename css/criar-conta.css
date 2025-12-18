@@ -1,0 +1,277 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #ce8026;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  /* Espaço entre logo e menu */
+  align-items: center;
+  padding: 0px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 100px;
+  transform: scale(1.3);
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Switch de tema */
+.switch-container {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background: #ccc;
+  border-radius: 30px;
+  position: absolute;
+  inset: 0;
+}
+
+.icone {
+  background: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.switch input:checked~.slider {
+  background: #333;
+}
+
+.switch input:checked~.slider .icone {
+  transform: translateX(30px);
+}
+
+/* ===== CARD DE CRIAR CONTA ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  /* Ajusta pra considerar a navbar */
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.card input {
+  width: 100%;
+  height: 42px; /* mesma altura dos do login */
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.card input:focus {
+  border-color: #ce8026;
+}
+
+.card button {
+  width: calc(100% - 4px);
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 12px;
+  background: #ce8026;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #a6621c;
+}
+
+/* ======== MODO ESCURO (igual ao principal.css) ======== */
+
+body.escuro {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+/* Caixa de cadastro */
+body.escuro .card {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Títulos e textos */
+body.escuro .card h2,
+body.escuro .card label {
+  color: #ffffff;
+}
+
+/* Inputs */
+body.escuro .card input {
+  background-color: #424242;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+body.escuro .card input:focus {
+  border-color: #ce8026; /* mesmo laranja do principal */
+  outline: none;
+}
+
+/* Botão cadastrar */
+body.escuro .card button {
+  background-color: #a6621c;
+  color: #fff;
+  border: none;
+}
+
+body.escuro .card button:hover {
+  background-color: #ce8026;
+}
+
+/* Link de voltar login */
+body.escuro .card a {
+  color: #ffa64d;
+}
+
+/* Campo da senha */
+.senha-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Campo da senha */
+.senha-container input {
+  width: 100%;
+  height: 42px; /* igual aos outros */
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.senha-container img {
+  position: absolute;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.senha-container img:hover {
+  opacity: 1;
+}
+
+
+/* Ajuste para os ícones de olho (fechado/aberto) ficarem do mesmo tamanho */
+.senha-container img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.botao-menu {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.botao-menu:hover {
+  color: black;
+  background-color: #e6a44d;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* ✅ muda de center pra stretch pra ocupar toda a largura */
+}
+
+form input {
+  width: 100%; /* garante mesmo tamanho dos campos */
+  height: 42px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 100%; /* ✅ agora igual aos campos */
+  background-color: #c46c17;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+form button:hover {
+  background-color: #a85c13;
+}
